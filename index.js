@@ -80,8 +80,17 @@ function getName(passedObj) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson() {  /* code here */
-  
+function makeSmartPerson(passedName) {  /* code here */
+  const obj = {
+    name: passedName,
+    sum: function(x,y){
+      return x + y;
+    },
+    speak:function(){
+      return 'Hello, my name is ' + obj.name;
+    },
+  };
+  return obj;
 }
 
 
