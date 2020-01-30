@@ -154,7 +154,7 @@ var inventory = [
 */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
-  return 'This is a ' + inventory[index].car_make + ' ' + inventory[index].car_model + '.';
+  return `This is a  ${inventory[index].car_make}  ${inventory[index].car_model}`;
 }
 
 /**
@@ -207,7 +207,11 @@ function getCarInfoById(inventory, id) {
 */
 function sortCarInventory(inventory) {
   /* code here */
-  return inventory.sort();
+  inventory.sort(function(a,b){
+    return a.car_model - b.car_model;
+  })
+  return inventory;
+  console.log(inventory.car_model);
 }
 
 /**
@@ -260,9 +264,10 @@ function getGermanCars(/* code here */) {
  * @instructions
  * Create arrow function versions of the following commented-out functions:
  * 
- * const sum = function (a, b) {
+ * const sum = function (a, b) {//done
  *   return a + b
  * }
+
  * 
  * const addFive = function(num) {
 *    return num + 5
@@ -272,9 +277,18 @@ function getGermanCars(/* code here */) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+//const sum = null; // code here!
+const sum = (a,b) => {
+  return a + b;
+}
+//const addFive = null; // code here!
+const addFive = (num) => {
+  return num + 5;
+}
+//const argTimesTwo = null; // code here!
+const argTimesTwo = (num) => {
+  return num * 2;
+}
 
 /**
  * ### Challenge `carMaker`
